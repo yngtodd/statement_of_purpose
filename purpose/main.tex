@@ -19,6 +19,7 @@
 \documentclass[letterpaper]{article}
 
 \usepackage{import}
+\usepackage{biblatex}
 \usepackage[letterpaper,margin=1.75in,noheadfoot]{geometry}
 \usepackage{fontspec, color, enumerate, sectsty}
 \usepackage[normalem]{ulem}
@@ -41,8 +42,12 @@ pdftitle={\yourname - \soptitle},pdfauthor={\yourname}, unicode]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      Title and Author Name
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{sections/references.bib}
+
 \begin{document}
 \begin{center}{\huge \scshape \soptitle}\end{center}
+%% Temporary Header
+\begin{center}\vspace{0.2em} {\Large [Draft Human Centered Computing]}\end{center}
 \begin{center}\vspace{0.2em} {\Large \yourname\\}
   {\youremail}\end{center}
 
@@ -54,5 +59,6 @@ pdftitle={\yourname - \soptitle},pdfauthor={\yourname}, unicode]{hyperref}
 \import{\sectiondir}{introduction.tex}
 \import{\sectiondir}{research.tex}
 \import{\sectiondir}{conclusion.tex}
-
+%\bibliography{references.bib}
+\printbibliography
 \end{document}
